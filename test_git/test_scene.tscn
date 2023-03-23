@@ -8,6 +8,6 @@
 mesh = SubResource( 1 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 0.348753, 0, 0, 0, 0.26998, 0, 0, 0, 0.318789, 0, 0.943637, 0 )
+transform = Transform( 0.348753, 0, 0, 0, 0.26998, 0, 0, 0, 2, 0, 0.943637, 0 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../MeshInstance")
