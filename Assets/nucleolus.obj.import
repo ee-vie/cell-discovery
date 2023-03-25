@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/nucleolus.obj-91d37ffad9be44c75f4077b0107d3178.mesh"
+
+[deps]
+
+files=[ "res://.import/nucleolus.obj-91d37ffad9be44c75f4077b0107d3178.mesh" ]
+
+source_file="res://Assets/nucleolus.obj"
+dest_files=[ "res://.import/nucleolus.obj-91d37ffad9be44c75f4077b0107d3178.mesh", "res://.import/nucleolus.obj-91d37ffad9be44c75f4077b0107d3178.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

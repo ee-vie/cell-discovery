@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/objects/pickable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/BaseCheck.gd" type="Script" id=4]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.0499784, 0.125651, 0.0516884 )
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.1, 0.25, 0.1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.964706, 0.0941176, 0.0941176, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.058, 0.138, 0.047 )
+
+[node name="Pickable" instance=ExtResource( 1 )]
+mode = 1
+
+[node name="GrabPointHandLeft" parent="." index="0" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0619995, 0.041142, -0.0901455 )
+
+[node name="GrabPointHandRight" parent="." index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0501747, 0.048074, -0.0861858 )
+
+[node name="CollisionShape" parent="." index="2"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="Area" type="Area" parent="CollisionShape" index="1"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CollisionShape/Area" index="0"]
+transform = Transform( 0.944483, 0, 0, 0, 0.944483, 0, 0, 0, 0.944483, 0, 0, 0 )
+shape = SubResource( 4 )
