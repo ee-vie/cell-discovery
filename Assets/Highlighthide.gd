@@ -1,7 +1,7 @@
 extends StaticBody
 
 
-var hide = true
+
 onready var highlightobject = $MeshInstance2
 
 # Called when the node enters the scene tree for the first time.
@@ -17,3 +17,6 @@ func hide_object(hide):
 		highlightobject.hide()
 	else:
 		highlightobject.show()
+
+func show_description(target):
+	return target.get_owner().get_node("Description")
