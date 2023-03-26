@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/ObjectTemplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Nucleos.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/cell_components/Mitochondria.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/cell_components/CellMembrane.tscn" type="PackedScene" id=6]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -46,49 +45,8 @@ transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-0
 [node name="golgi" parent="GolgiApparatus/StaticBody/golgi" index="0"]
 transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-08, 0, 0, 1, 0, 0, 0 )
 
-[node name="GolgiApparatus2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 22.7721, 1.75212, 31.1648 )
-
-[node name="GolgiApparatus3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -15.1129, 16.6136, -10.2675 )
-
-[node name="GolgiApparatus4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.96055, 20.7509, 6.85469 )
-
-[node name="GolgiApparatus5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -17.9693, 10.0487, 24.7526 )
-
-[node name="GolgiApparatus6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1.04013, -0.0429916, 27.5146 )
-
 [node name="Mitochondria" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
-
-[node name="Mitochondria2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15698, 16.4998, 25.6759 )
-
-[node name="Mitochondria3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.90051, 5.73933, 31.2096 )
-
-[node name="Mitochondria4" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3551, 8.2613, -22.7614 )
-
-[node name="Mitochondria5" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5974, 9.81328, 23.1929 )
-
-[node name="Mitochondria6" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.491, -0.211361, 10.8629 )
-
-[node name="Mitochondria7" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5608, 11.7246, 19.4971 )
-
-[node name="Mitochondria8" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4076, -0.211362, -6.60071 )
-
-[node name="Mitochondria9" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9382, -13.8314, -8.32508 )
-
-[node name="CellMembrane" parent="." instance=ExtResource( 6 )]
 
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
