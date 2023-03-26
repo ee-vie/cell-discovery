@@ -24,30 +24,16 @@ export var far_z = 1000.0
 var interface : ARVRInterface
 var enabled_extensions : Array
 
-#var distance
-#
-#onready var laserpointer_raycast = $RightHandController/LaserPointer/RayCast
-#onready var laserpointer_scaler = $RightHandController/LaserPointer/Scaler
+onready var guipanel = $GUIPanel3D
+onready var controller = $Controller
+onready var description = $GUIPanel3D/Viewport/GUI/Panel/Label
+
 
 
 func set_auto_initialise(p_new_value):
 	auto_initialise = p_new_value
 	update_configuration_warning()
 	
-#func laser_pointer_script():
-#	if laserpointer_raycast.get_collider():
-#		distance = transform.origin.distance_to(laserpointer_raycast.get_collision_point())
-#		laserpointer_scaler.scale.z = distance/2
-#	else:
-#		laserpointer_scaler.scale.z = laserpointer_raycast.cast_to.z
-#
-#	if laserpointer_raycast.is_colliding():
-#		var target = laserpointer_raycast.get_collider()
-#		if target.is_in_group("ChoosableObejct"):
-#			print("Test")
-#
-#func _physics_process(delta):
-#	laser_pointer_script()
 
 func set_enable_passthrough(p_new_value):
 	enable_passthrough = p_new_value
@@ -72,9 +58,18 @@ func get_interface() -> ARVRInterface:
 func _ready():
 	$ARVRCamera.near = near_z
 	$ARVRCamera.far = far_z
+	
+	guipanel.hide()
+	controller.hide()
 
 	if auto_initialise && !Engine.editor_hint:
 		initialise()
+
+func panelshow(text):
+	guipanel.show()
+	description.set_text(text)
+	controller.show()
+	
 
 func initialise() -> bool:
 	if Engine.editor_hint:
