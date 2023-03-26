@@ -5,7 +5,7 @@ var target
 onready var rowner = get_owner()
 onready var rcontroller = rowner.get_node("RightHandController") 
 onready var cam = rowner.get_node("ARVRCamera")
-#var rcontroller = get_owner().get_node("RightHandController")
+
 
 #func _ready():
 	
@@ -23,8 +23,8 @@ func _process(_delta):
 		if target.has_method("hide_object"):
 			target.hide_object(false)
 			if rcontroller.is_button_pressed(15):
-				var descr = target.show_description(target)
-				rowner.add_child(descr)
+				var texttarget = target.get_owner().get_node("Description").get_text()
+				rowner.panelshow(texttarget)
 				
 	else:
 		if target == null or !target.has_method("hide_object"):
