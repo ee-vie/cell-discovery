@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/ObjectTemplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Nucleos.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/cell_components/Mitochondria.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/cell_components/Nucleus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/cell_components/CellMembrane.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/cell_components/RoughER.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/cell_components/SmoothER.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ViewportTexture" id=3]
 viewport_path = NodePath("Viewport")
@@ -25,11 +29,15 @@ albedo_texture = SubResource( 3 )
 [node name="FPControllerCellScence" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
 
+[node name="OptionButton" parent="FPControllerCellScence/GUIPanel3D/Viewport/GUI/Panel" index="7"]
+items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null, "Item 2", null, false, 2, null ]
+
 [node name="Quad" parent="FPControllerCellScence/GUIPanel3D" index="2"]
 material/0 = SubResource( 4 )
 
 [node name="Nucleos" parent="." instance=ExtResource( 3 )]
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0 )
+visible = false
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211362, 8.2004 )
@@ -60,6 +68,17 @@ transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-0
 
 [node name="Mitochondria" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
+
+[node name="Nucleus" parent="." instance=ExtResource( 6 )]
+
+[node name="CellMembrane" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="RoughER" parent="." instance=ExtResource( 8 )]
+
+[node name="SmoothER" parent="." instance=ExtResource( 9 )]
+
+[node name="CellMembrane2" parent="." instance=ExtResource( 7 )]
 
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
