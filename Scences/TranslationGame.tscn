@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerMiniGame.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/PickableBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scences/TranslationGameScript.gd" type="Script" id=3]
 [ext_resource path="res://Assets/TranslationGame/DNABase.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/TranslationGame/DNABasetest.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CylinderMesh" id=1]
 height = 0.056
@@ -52,8 +51,6 @@ autostart = true
 
 [node name="SpawnPosition" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88066, 0.610525, -0.649992 )
-
-[node name="DNABase2" parent="." instance=ExtResource( 5 )]
 
 [connection signal="dropped" from="Pickable" to="." method="_on_Pickable_dropped"]
 [connection signal="area_entered" from="CheckArea" to="." method="_on_CheckArea_area_entered"]
