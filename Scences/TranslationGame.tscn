@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerMiniGame.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/PickableBase.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Assets/MinigameComponents/PickableCytosine.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/MinigameComponents/PickableUracile.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/MinigameComponents/PickableGuanine.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/MinigameComponents/RnaPolymerase.glb" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Materials/DnaMaterial.tres" type="Material" id=11]
+[ext_resource path="res://Assets/MinigameComponents/rna_pol_dna.glb" type="PackedScene" id=12]
 
 [sub_resource type="CylinderMesh" id=1]
 height = 0.056
@@ -73,6 +76,14 @@ tracks/1/keys = {
 "values": [ Vector3( 0.698592, 1.3708, -0.673315 ) ]
 }
 
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.831373, 0.67451, 1, 1 )
+emission_enabled = true
+emission = Color( 0.572549, 0.372549, 1, 1 )
+emission_energy = 0.5
+emission_operator = 0
+emission_on_uv2 = false
+
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
 
@@ -134,8 +145,38 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.857908, 1.22489, -0.217017 )
 [node name="PickableGuanine" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.852067, 1.2218, 0 )
 
+[node name="RnaPolymerase" parent="." instance=ExtResource( 10 )]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.139753, 1.21032, -1.15706 )
+
+[node name="rna_pol_closed" parent="RnaPolymerase" index="0"]
+material/0 = SubResource( 6 )
+
+[node name="rna_pol_dna" parent="." instance=ExtResource( 12 )]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 1.18881, -1.29765 )
+
+[node name="Cube" parent="rna_pol_dna" index="0"]
+material/0 = ExtResource( 11 )
+
+[node name="dna_segment" parent="rna_pol_dna" index="1"]
+transform = Transform( 0.0260696, 0.206723, 0, -0.206723, 0.0260696, 0, 0, 0, 0.20836, -1.70875, 0.400616, 0.189163 )
+material/0 = ExtResource( 11 )
+
+[node name="dna_segment001" parent="rna_pol_dna" index="2"]
+material/0 = ExtResource( 11 )
+
+[node name="Cube001" parent="rna_pol_dna" index="3"]
+material/0 = ExtResource( 11 )
+
+[node name="dna_segment002" parent="rna_pol_dna" index="4"]
+material/0 = ExtResource( 11 )
+
+[node name="dna_segment003" parent="rna_pol_dna" index="5"]
+material/0 = ExtResource( 11 )
+
 [connection signal="dropped" from="Pickable" to="." method="_on_Pickable_dropped"]
 
 [editable path="FPControllerCellScence"]
 [editable path="Pickable"]
 [editable path="Base1"]
+[editable path="RnaPolymerase"]
+[editable path="rna_pol_dna"]
