@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/14. piano2.minor.mp3-6ccdcdd82cc6ed6f730c0840dd359e33.mp3str"
+
+[deps]
+
+source_file="res://Music/Game and menu music/14. piano2.minor.mp3"
+dest_files=[ "res://.import/14. piano2.minor.mp3-6ccdcdd82cc6ed6f730c0840dd359e33.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
