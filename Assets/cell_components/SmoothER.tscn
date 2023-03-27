@@ -5,6 +5,7 @@
 [ext_resource path="res://Assets/cell_components/ER_smooth.glb" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Materials/SmoothER.tres" type="Material" id=4]
 
+
 [sub_resource type="SphereMesh" id=1]
 
 [sub_resource type="SpatialMaterial" id=2]

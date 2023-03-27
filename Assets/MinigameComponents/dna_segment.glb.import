@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/dna_segment.glb-94a82221a7e38e123a461b15259cd56a.scn"
+path="res://.import/dna_segment.glb-438e91ded5aaa694560d3c11e0fe6086.scn"
 
 [deps]
 
-source_file="res://Assets/cell_components/dna_segment.glb"
-dest_files=[ "res://.import/dna_segment.glb-94a82221a7e38e123a461b15259cd56a.scn" ]
+source_file="res://Assets/MinigameComponents/dna_segment.glb"
+dest_files=[ "res://.import/dna_segment.glb-438e91ded5aaa694560d3c11e0fe6086.scn" ]
 
 [params]
 
