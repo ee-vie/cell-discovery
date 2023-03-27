@@ -29,9 +29,6 @@ albedo_texture = SubResource( 3 )
 [node name="FPControllerCellScence" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
 
-[node name="OptionButton" parent="FPControllerCellScence/GUIPanel3D/Viewport/GUI/Panel" index="7"]
-items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null, "Item 2", null, false, 2, null ]
-
 [node name="Quad" parent="FPControllerCellScence/GUIPanel3D" index="2"]
 material/0 = SubResource( 4 )
 
@@ -52,19 +49,7 @@ shape = SubResource( 2 )
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 
 [node name="GolgiApparatus" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1.63262, -0.62195, -0.973509, 0.534191, 1.90084, -0.31853, 1.0243, 0, 1.71779, 21.285, -1.45608, 15.9896 )
-
-[node name="AudioStreamPlayer3D" parent="GolgiApparatus" index="0"]
-transform = Transform( 0.5, -4.82701e-07, -7.89762e-07, 5.45898e-09, 0.499999, 1.05085e-07, 2.98023e-08, -1.1367e-09, 0.500001, 0, 0, 0 )
-
-[node name="CollisionShape" parent="GolgiApparatus/StaticBody" index="0"]
-transform = Transform( 4.03768e-08, 0, -1, -1, -4.31493e-08, 1.88844e-08, -4.71472e-08, 1, -2.98023e-08, -0.0574436, 0.0061512, 0 )
-
-[node name="MeshInstance2" parent="GolgiApparatus/StaticBody" index="1"]
-transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-08, 0, 0, 1, 0, 0, 0 )
-
-[node name="golgi" parent="GolgiApparatus/StaticBody/golgi" index="0"]
-transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-08, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1.99646, 0.118379, -0.0111948, -0.118589, 1.96855, -0.332833, -0.00867826, 0.332909, 1.97208, 31.3174, -1.81283, 1.06848 )
 
 [node name="Mitochondria" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
@@ -78,13 +63,9 @@ visible = false
 
 [node name="SmoothER" parent="." instance=ExtResource( 9 )]
 
-[node name="CellMembrane2" parent="." instance=ExtResource( 7 )]
-
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
 [editable path="FPControllerCellScence/GUIPanel3D"]
 [editable path="FPControllerCellScence/GUIPanel3D/Viewport/GUI"]
 [editable path="Nucleos"]
 [editable path="ObjectTemplate"]
-[editable path="GolgiApparatus"]
-[editable path="GolgiApparatus/StaticBody/golgi"]
