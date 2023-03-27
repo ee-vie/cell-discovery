@@ -54,7 +54,6 @@ shape = SubResource( 2 )
 [node name="ObjectTemplate" parent="." instance=ExtResource( 2 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 
-
 [node name="cellsound-Heart" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 4 )
 unit_db = -10.0
@@ -68,20 +67,62 @@ autoplay = true
 stream = ExtResource( 6 )
 autoplay = true
 
-[node name="GolgiApparatus" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.99646, 0.118379, -0.0111948, -0.118589, 1.96855, -0.332833, -0.00867826, 0.332909, 1.97208, 31.3174, -1.81283, 1.06848 )
-
-[node name="Mitochondria" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
-
 [node name="Nucleus" parent="." instance=ExtResource( 9 )]
 
 [node name="CellMembrane" parent="." instance=ExtResource( 10 )]
-visible = false
+transform = Transform( -0.912856, 0, 0.408283, 0, 1, 0, -0.408283, 0, -0.912856, -3.81687, 0, 15.3188 )
+
+[node name="CollisionShape" parent="CellMembrane/StaticBody" index="2"]
+transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495763 )
 
 [node name="RoughER" parent="." instance=ExtResource( 11 )]
 
 [node name="SmoothER" parent="." instance=ExtResource( 12 )]
+
+[node name="GolgiApparatus" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.3371, -0.870132, 1.20625, 1.23899, 1.54899, -0.256031, -0.822838, 0.918438, 1.57461, -29.0948, -20.4633, 28.2307 )
+
+[node name="GolgiApparatus2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.432846, -0.834654, -1.76522, 0.485591, -1.70525, 0.925372, -1.89126, -0.628859, -0.166405, -12.4108, -5.06658, 45.4496 )
+
+[node name="GolgiApparatus3" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.645167, -0.00523217, 1.89307, -0.640955, 1.88247, -0.213237, -1.78127, -0.675474, -0.608931, 9.13623, 6.63208, 45.8188 )
+
+[node name="GolgiApparatus4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.925168, 0.30243, 1.74717, -0.851264, 1.80449, 0.138412, -1.55545, -0.807679, 0.963453, -26.1551, 14.0889, 36.0505 )
+
+[node name="Mitochondria" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.707107, -0.5, -0.5, 0, 0.707107, -0.707107, 0.707107, 0.5, 0.5, 20.5154, 14.7573, -7.79729 )
+
+[node name="Mitochondria2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.75, -0.5, -0.433013, 0.433013, 0.866025, -0.25, 0.5, 0, 0.866025, -14, -30, 35 )
+
+[node name="Mitochondria3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.866025, 0, 0.5, 0.353553, 0.707107, -0.612372, -0.353553, 0.707107, 0.612372, -43, 13, 10 )
+
+[node name="Mitochondria4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.707107, 0, 0.707107, 0.5, 0.707107, -0.5, -0.5, 0.707107, 0.5, 17, -29, 17 )
+
+[node name="Mitochondria5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.707107, -0.5, -0.5, 0, 0.707107, -0.707107, 0.707107, 0.5, 0.5, -36, 23, 28 )
+
+[node name="Mitochondria6" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -42, -18, 3 )
+
+[node name="Mitochondria7" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -31, 2 )
+
+[node name="Mitochondria8" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.0334937, 0.875, -0.482963, 0.12941, 0.482963, 0.866025, 0.991025, -0.0334937, -0.12941, 28, 11, 42 )
+
+[node name="Mitochondria9" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.965926, 0.224144, 0.12941, -0.258819, 0.836516, 0.482963, 0, -0.5, 0.866025, -50, 4, 32 )
+
+[node name="Mitochondria10" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 27, 5 )
+
+[node name="Mitochondria11" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.965926, -0.183013, 0.183013, 0, 0.707107, 0.707107, -0.258819, 0.683013, -0.683013, -1, 26, 4 )
 
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
@@ -89,3 +130,5 @@ visible = false
 [editable path="FPControllerCellScence/GUIPanel3D/Viewport/GUI"]
 [editable path="Nucleos"]
 [editable path="ObjectTemplate"]
+[editable path="CellMembrane"]
+[editable path="CellMembrane/StaticBody/cell_membrane"]

@@ -33,6 +33,7 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 [node name="Description" parent="." instance=ExtResource( 3 )]
 
 [node name="StaticBody" type="StaticBody" parent="." groups=["ChoosableObejct"]]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
