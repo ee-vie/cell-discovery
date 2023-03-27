@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/12.the-last-piano.mp3-9904fd2fedb69302cd2507809c6ee295.mp3str"
+
+[deps]
+
+source_file="res://Music/Game and menu music/12.the-last-piano.mp3"
+dest_files=[ "res://.import/12.the-last-piano.mp3-9904fd2fedb69302cd2507809c6ee295.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

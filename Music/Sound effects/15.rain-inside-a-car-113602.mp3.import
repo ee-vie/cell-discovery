@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/15.rain-inside-a-car-113602.mp3-0dbe0fb8be4e4b81a5a9f136a45a1630.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/15.rain-inside-a-car-113602.mp3"
+dest_files=[ "res://.import/15.rain-inside-a-car-113602.mp3-0dbe0fb8be4e4b81a5a9f136a45a1630.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
