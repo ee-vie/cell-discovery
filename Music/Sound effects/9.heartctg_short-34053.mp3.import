@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/9.heartctg_short-34053.mp3-278cb96ba5c8d56df1ee65f26ab61d30.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/9.heartctg_short-34053.mp3"
+dest_files=[ "res://.import/9.heartctg_short-34053.mp3-278cb96ba5c8d56df1ee65f26ab61d30.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

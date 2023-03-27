@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8.fireplace-crackling-wood-little-flame-7039.mp3-be4ec648e1787db60e12400df3ffd0bc.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/8.fireplace-crackling-wood-little-flame-7039.mp3"
+dest_files=[ "res://.import/8.fireplace-crackling-wood-little-flame-7039.mp3-be4ec648e1787db60e12400df3ffd0bc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
