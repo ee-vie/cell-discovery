@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/ObjectTemplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Nucleos.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/cell_components/Mitochondria.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/cell_components/Nucleus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/cell_components/CellMembrane.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/cell_components/RoughER.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/cell_components/SmoothER.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ViewportTexture" id=3]
 viewport_path = NodePath("Viewport")
@@ -30,6 +34,7 @@ material/0 = SubResource( 4 )
 
 [node name="Nucleos" parent="." instance=ExtResource( 3 )]
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0 )
+visible = false
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211362, 8.2004 )
@@ -44,22 +49,19 @@ shape = SubResource( 2 )
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 
 [node name="GolgiApparatus" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1.63262, -0.62195, -0.973509, 0.534191, 1.90084, -0.31853, 1.0243, 0, 1.71779, 21.285, -1.45608, 15.9896 )
-
-[node name="AudioStreamPlayer3D" parent="GolgiApparatus" index="0"]
-transform = Transform( 0.5, -4.82701e-07, -7.89762e-07, 5.45898e-09, 0.499999, 1.05085e-07, 2.98023e-08, -1.1367e-09, 0.500001, 0, 0, 0 )
-
-[node name="CollisionShape" parent="GolgiApparatus/StaticBody" index="0"]
-transform = Transform( 4.03768e-08, 0, -1, -1, -4.31493e-08, 1.88844e-08, -4.71472e-08, 1, -2.98023e-08, -0.0574436, 0.0061512, 0 )
-
-[node name="MeshInstance2" parent="GolgiApparatus/StaticBody" index="1"]
-transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-08, 0, 0, 1, 0, 0, 0 )
-
-[node name="golgi" parent="GolgiApparatus/StaticBody/golgi" index="0"]
-transform = Transform( 1, -2.98023e-08, 2.98023e-08, -1.88843e-08, 1, 1.64553e-08, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1.99646, 0.118379, -0.0111948, -0.118589, 1.96855, -0.332833, -0.00867826, 0.332909, 1.97208, 31.3174, -1.81283, 1.06848 )
 
 [node name="Mitochondria" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
+
+[node name="Nucleus" parent="." instance=ExtResource( 6 )]
+
+[node name="CellMembrane" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="RoughER" parent="." instance=ExtResource( 8 )]
+
+[node name="SmoothER" parent="." instance=ExtResource( 9 )]
 
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
@@ -67,5 +69,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5154, 14.7573, -7.79729 )
 [editable path="FPControllerCellScence/GUIPanel3D/Viewport/GUI"]
 [editable path="Nucleos"]
 [editable path="ObjectTemplate"]
-[editable path="GolgiApparatus"]
-[editable path="GolgiApparatus/StaticBody/golgi"]
