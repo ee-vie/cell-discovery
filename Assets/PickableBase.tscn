@@ -23,11 +23,9 @@ mode = 1
 
 [node name="GrabPointHandLeft" parent="." index="0" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.050557, 0.041142, -0.0901455 )
-visible = true
 
 [node name="GrabPointHandRight" parent="." index="1" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0501747, 0.048074, -0.0861858 )
-visible = true
 
 [node name="CollisionShape" parent="." index="2"]
 shape = SubResource( 3 )
