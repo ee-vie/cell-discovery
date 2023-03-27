@@ -72,14 +72,8 @@ autoplay = true
 [node name="CellMembrane" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.912856, 0, 0.408283, 0, 1, 0, -0.408283, 0, -0.912856, -3.81687, 0, 15.3188 )
 
-[node name="MeshInstance2" parent="CellMembrane/StaticBody" index="0"]
-visible = false
-
-[node name="cell_membrane" parent="CellMembrane/StaticBody/cell_membrane" index="0"]
-visible = false
-
 [node name="CollisionShape" parent="CellMembrane/StaticBody" index="2"]
-transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.752428, 0, -0.27705 )
+transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495763 )
 
 [node name="RoughER" parent="." instance=ExtResource( 11 )]
 

@@ -4,7 +4,6 @@
 [ext_resource path="res://Assets/Materials/HighlightingMaterial.tres" type="Material" id=2]
 [ext_resource path="res://Assets/cell_components/nucleus_1.glb" type="PackedScene" id=3]
 
-
 [sub_resource type="SphereMesh" id=1]
 
 [sub_resource type="SpatialMaterial" id=2]
