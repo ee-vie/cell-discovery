@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/walking-on-thin-ice.mp3-86ae14ebcb59fe045c886c403fc33d0b.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/walking-on-thin-ice.mp3"
+dest_files=[ "res://.import/walking-on-thin-ice.mp3-86ae14ebcb59fe045c886c403fc33d0b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

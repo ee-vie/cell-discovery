@@ -56,6 +56,5 @@ material/0 = ExtResource( 5 )
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0, 0, 0 )
 shape = SubResource( 5 )
-disabled = true
 
 [editable path="StaticBody/cell_membrane"]
