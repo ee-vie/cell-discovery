@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/5.superspacy-atmosphere-106826.mp3-96bc0349981b129b0d4f34327abab7e7.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/5.superspacy-atmosphere-106826.mp3"
+dest_files=[ "res://.import/5.superspacy-atmosphere-106826.mp3-96bc0349981b129b0d4f34327abab7e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

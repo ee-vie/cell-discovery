@@ -59,8 +59,8 @@ func _ready():
 	$ARVRCamera.near = near_z
 	$ARVRCamera.far = far_z
 	
-	guipanel.hide()
-	controller.hide()
+	#guipanel.hide()
+	#controller.hide()
 
 	if auto_initialise && !Engine.editor_hint:
 		initialise()

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/deep-sea-ambience-6933.mp3-48323fcfa87ddd1e5cf9cfaa725e49d6.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/deep-sea-ambience-6933.mp3"
+dest_files=[ "res://.import/deep-sea-ambience-6933.mp3-48323fcfa87ddd1e5cf9cfaa725e49d6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

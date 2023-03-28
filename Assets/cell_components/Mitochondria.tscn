@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Materials/HighlightingMaterial.tres" type="Material" id=1]
 [ext_resource path="res://Assets/Highlighthide.gd" type="Script" id=2]
@@ -6,6 +6,16 @@
 [ext_resource path="res://Assets/cell_components/mitochiondria.glb" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Materials/MitIMM.tres" type="Material" id=5]
 [ext_resource path="res://Assets/Materials/MitOMM.tres" type="Material" id=6]
+
+[sub_resource type="ViewportTexture" id=7]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="SpatialMaterial" id=8]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+flags_albedo_tex_force_srgb = true
+albedo_texture = SubResource( 7 )
 
 [sub_resource type="CapsuleShape" id=6]
 radius = 0.492335
@@ -31,8 +41,11 @@ surfaces/0 = {
 
 [node name="Description" parent="." instance=ExtResource( 3 )]
 
+[node name="Quad" parent="Description" index="2"]
+material/0 = SubResource( 8 )
+
 [node name="StaticBody" type="StaticBody" parent="." groups=["ChoosableObejct"]]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
@@ -52,4 +65,5 @@ material/0 = ExtResource( 6 )
 transform = Transform( 0.955917, 0, 0, 0, 0.951157, 0, 0, 0, 1, 0, 0, 0 )
 material/0 = ExtResource( 5 )
 
+[editable path="Description"]
 [editable path="StaticBody/mitochiondria"]
