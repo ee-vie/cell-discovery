@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openxr/scenes/controller.gd" type="Script" id=2]
@@ -11,24 +11,17 @@
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_flight.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/LaserPointer.tscn" type="PackedScene" id=11]
-[ext_resource path="res://addons/gui_in_vr/gui_panel_3d_cell_scence.tscn" type="PackedScene" id=12]
+[ext_resource path="res://addons/gui_in_vr/gui_panel_3d.tscn" type="PackedScene" id=12]
 [ext_resource path="res://addons/gui_in_vr/player/controller.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0, 0.960784, 0.0588235, 1 )
 
-[sub_resource type="ViewportTexture" id=2]
-viewport_path = NodePath("Viewport")
-
-[sub_resource type="SpatialMaterial" id=3]
-resource_local_to_scene = true
-flags_transparent = true
-flags_unshaded = true
-flags_albedo_tex_force_srgb = true
-albedo_texture = SubResource( 2 )
-
 [node name="FPControllerCellScence" type="ARVROrigin"]
 script = ExtResource( 1 )
+
+[node name="GUIPanel3D" parent="." instance=ExtResource( 12 )]
+visible = false
 
 [node name="Configuration" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -80,20 +73,9 @@ height = 0.176
 sides = 32
 material = SubResource( 1 )
 
-[node name="GUIPanel3D" parent="." instance=ExtResource( 12 )]
-transform = Transform( 2.74293, 0, 0.405014, 0, 3, 0, -1.21504, 0, 0.914311, -0.478985, 1.31147, -0.7858 )
-visible = false
-
-[node name="OptionButton" parent="GUIPanel3D/Viewport/GUI/Panel" index="7"]
-items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null, "Item 2", null, false, 2, null ]
-
-[node name="Quad" parent="GUIPanel3D" index="2"]
-material/0 = SubResource( 3 )
-
 [node name="Controller" parent="." instance=ExtResource( 13 )]
 visible = false
 controller_id = 2
 
 [editable path="LeftHandController/FunctionTeleport"]
-[editable path="GUIPanel3D"]
-[editable path="GUIPanel3D/Viewport/GUI"]
+[editable path="Controller"]
