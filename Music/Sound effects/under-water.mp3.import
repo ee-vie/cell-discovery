@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/under-water.mp3-c467aafc7cf82c15df14054e58f85f2b.mp3str"
+
+[deps]
+
+source_file="res://Music/Sound effects/under-water.mp3"
+dest_files=[ "res://.import/under-water.mp3-c467aafc7cf82c15df14054e58f85f2b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

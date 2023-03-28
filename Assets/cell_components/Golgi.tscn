@@ -28,8 +28,6 @@ surfaces/0 = {
 [node name="GolgiApparatus" type="Spatial"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-
 [node name="Description" parent="." instance=ExtResource( 3 )]
 
 [node name="StaticBody" type="StaticBody" parent="." groups=["ChoosableObejct"]]
@@ -49,5 +47,8 @@ material/0 = ExtResource( 1 )
 
 [node name="golgi" parent="StaticBody/golgi" index="0"]
 material/0 = ExtResource( 6 )
+
+[node name="Bubbles-sound" parent="StaticBody/golgi/golgi" index="0"]
+unit_db = 5.664
 
 [editable path="StaticBody/golgi"]
