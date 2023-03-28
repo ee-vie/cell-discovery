@@ -24,9 +24,6 @@ export var far_z = 1000.0
 var interface : ARVRInterface
 var enabled_extensions : Array
 
-onready var guipanel = $GUIPanel3D
-onready var controller = $Controller
-#onready var description = $GUIPanel3D/Viewport/GUI/Panel/Label
 
 
 
@@ -58,17 +55,11 @@ func get_interface() -> ARVRInterface:
 func _ready():
 	$ARVRCamera.near = near_z
 	$ARVRCamera.far = far_z
-	
-	#guipanel.hide()
-	#controller.hide()
+
 
 	if auto_initialise && !Engine.editor_hint:
 		initialise()
 
-func panelshow(text):
-	guipanel.show()
-	#description.set_text(text)
-	controller.show()
 	
 
 func initialise() -> bool:

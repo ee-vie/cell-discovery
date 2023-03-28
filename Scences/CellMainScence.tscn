@@ -1,4 +1,6 @@
-[gd_scene load_steps=21 format=2]
+
+[gd_scene load_steps=23 format=2]
+
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/ObjectTemplate.tscn" type="PackedScene" id=2]
@@ -178,9 +180,10 @@ anims/VesicleAnimation = SubResource( 5 )
 script = ExtResource( 15 )
 
 [editable path="FPControllerCellScence"]
-[editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
 [editable path="FPControllerCellScence/GUIPanel3D"]
 [editable path="FPControllerCellScence/GUIPanel3D/Viewport/GUI"]
+[editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
+[editable path="FPControllerCellScence/Controller"]
 [editable path="Nucleos"]
 [editable path="ObjectTemplate"]
 [editable path="CellMembrane"]

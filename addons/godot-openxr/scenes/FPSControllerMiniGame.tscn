@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr_minigame.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openxr/scenes/controller.gd" type="Script" id=2]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" type="PackedScene" id=4]
