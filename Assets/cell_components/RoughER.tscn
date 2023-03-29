@@ -53,6 +53,7 @@ autoplay = true
 max_distance = 20.0
 
 [node name="Description" type="TextEdit" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 text = "test"

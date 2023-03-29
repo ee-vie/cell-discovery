@@ -27,9 +27,6 @@ var enabled_extensions : Array
 onready var label3d = $Label3D
 
 
-
-
-
 func set_auto_initialise(p_new_value):
 	auto_initialise = p_new_value
 	update_configuration_warning()
@@ -226,3 +223,6 @@ func _get_configuration_warning():
 		return "You must call initialise() manually for VR to start"
 
 	return ""
+
+
+
