@@ -17,7 +17,7 @@ extents = Vector3( 7.48083, 0.157436, 7.48311 )
 [node name="MainMenuScene" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="FPControllerCellScence" parent="." instance=ExtResource( 1 )]
+[node name="ARVROrigin" parent="." instance=ExtResource( 1 )]
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -37,7 +37,7 @@ unit_db = 10.0
 autoplay = true
 
 [node name="GuiMenu" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288567, 1.05896, -0.76259 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288567, 1.05896, -0.496016 )
 
-[editable path="FPControllerCellScence"]
-[editable path="FPControllerCellScence/Controller"]
+[editable path="ARVROrigin"]
+[editable path="ARVROrigin/Controller"]

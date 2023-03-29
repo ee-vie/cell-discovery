@@ -12,8 +12,8 @@
 [ext_resource path="res://addons/gui_in_vr/mainButtons/MiniGamesButton.gd" type="Script" id=10]
 
 [node name="GUI" type="Control"]
-margin_right = 644.0
-margin_bottom = 408.0
+margin_right = 381.0
+margin_bottom = 274.0
 mouse_filter = 1
 script = ExtResource( 8 )
 
@@ -33,45 +33,45 @@ stretch_mode = 4
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
 margin_top = 84.0
 margin_right = 370.0
-margin_bottom = 194.0
+margin_bottom = 175.0
 size_flags_vertical = 3
 custom_constants/separation = 15
 
 [node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
 margin_right = 370.0
-margin_bottom = 110.0
+margin_bottom = 50.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 custom_constants/separation = 10
 alignment = 1
 
 [node name="SteuerungButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 6 )]
+visible = false
 rect_min_size = Vector2( 300, 20 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ErkundungButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
-margin_top = 30.0
-margin_bottom = 50.0
 rect_min_size = Vector2( 300, 20 )
 script = ExtResource( 9 )
-scene_to_load = "res://Scences/CellMainScene.tscn"
+scene_to_load = "res://Scences/CellMainScence.tscn"
 
 [node name="MiniGamesButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 60.0
-margin_bottom = 80.0
+margin_top = 30.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 300, 20 )
 script = ExtResource( 10 )
 scene_to_load = "res://Scences/TranskriptionGame.tscn"
 
 [node name="EinstellungenButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 5 )]
-margin_top = 90.0
-margin_bottom = 110.0
+visible = false
+margin_top = 60.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 300, 20 )
 scene_to_load = "res://addons/gui_in_vr/subMenu/Einstellungen.tscn"
 
 [node name="Label" type="Label" parent="Menu"]
-margin_top = 198.0
+margin_top = 179.0
 margin_right = 370.0
 margin_bottom = 270.0
 size_flags_horizontal = 3
