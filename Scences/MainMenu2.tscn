@@ -37,7 +37,7 @@ unit_db = 10.0
 autoplay = true
 
 [node name="GuiMenu" parent="." instance=ExtResource( 4 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0.288567, 1.30192, -0.82284 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288567, 1.05896, -0.76259 )
 
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/Controller"]
