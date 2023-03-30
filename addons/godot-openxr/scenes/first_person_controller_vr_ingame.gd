@@ -27,6 +27,8 @@ var enabled_extensions : Array
 onready var label3d = $Label3D
 onready var menutext = $ChangetoMenu
 
+#onready var cam = $ARVRCamera
+
 var menu_check = false
 
 func set_auto_initialise(p_new_value):
@@ -65,6 +67,11 @@ func _ready():
 	if auto_initialise && !Engine.editor_hint:
 		initialise()
 
+#func _process(delta):
+#	var campos = cam
+#	label3d.set_global_translation(campos)
+#	label3d.translation.z = -0.4
+
 func panelshow(text):
 	label3d.set_text(text)
 	label3d.show()
@@ -89,6 +96,9 @@ func _on_LeftHandController_button_release(button):
 			get_tree().change_scene("res://Scences/MainMenu2.tscn")
 			menu_check = false
 			print(menu_check)
+	if button == 1:
+		panelhide()
+		
 
 func initialise() -> bool:
 	if Engine.editor_hint:

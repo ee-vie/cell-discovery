@@ -46,7 +46,11 @@ material/0 = SubResource( 2 )
 [node name="Description" type="TextEdit" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-text = "test"
+text = "Nucleus: 
+the central part of a cell 
+that controls its growth 
+and contains the 
+chromosomal DNA"
 
 [node name="StaticBody" type="StaticBody" parent="." groups=["ChoosableObejct"]]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
