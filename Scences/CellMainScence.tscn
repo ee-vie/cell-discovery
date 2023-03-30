@@ -56,8 +56,11 @@ script = ExtResource( 2 )
 [node name="FPControllerCellScence" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
 
-[node name="MovementFlight" parent="FPControllerCellScence" index="5"]
+[node name="MovementTurn" parent="FPControllerCellScence/RightHandController" index="1"]
 order = 2
+
+[node name="MovementFlight" parent="FPControllerCellScence" index="5"]
+order = 3
 flight_button = 2
 
 [node name="Label3D" parent="FPControllerCellScence" index="7"]
@@ -89,6 +92,13 @@ autoplay = true
 
 [node name="Nucleus" parent="." instance=ExtResource( 9 )]
 
+[node name="Description" parent="Nucleus" index="2"]
+text = "Nucleus: 
+the central part of a cell 
+that controls its growth 
+and contains the 
+chromosomal DNA"
+
 [node name="Nucleolus" parent="." instance=ExtResource( 16 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 
@@ -111,6 +121,11 @@ transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0
 
 [node name="Description" parent="CellMembrane" index="3"]
 visible = false
+text = "Cell membrane:
+ a lipid bilayer that separates 
+and protects the interior of 
+the cell from the outside
+ environment."
 
 [node name="RoughER" parent="." instance=ExtResource( 11 )]
 
@@ -120,6 +135,12 @@ visible = false
 
 [node name="GolgiApparatus" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 1.3371, -0.870132, 1.20625, 1.23899, 1.54899, -0.256031, -0.822838, 0.918438, 1.57461, -29.0948, -20.4633, 28.2307 )
+
+[node name="Description" parent="Golgi/GolgiApparatus" index="2"]
+text = "Golgi Complex: 
+responsible for modifying
+proteins, which are then sent
+to their destination in vesicles."
 
 [node name="GolgiApparatus2" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 0.432846, -0.834654, -1.76522, 0.485591, -1.70525, 0.925372, -1.89126, -0.628859, -0.166405, -12.4108, -5.0666, 45.4496 )

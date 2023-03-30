@@ -12,8 +12,6 @@ albedo_color = Color( 0.533333, 1, 0.0235294, 1 )
 
 [node name="Cytoskeleton" type="Spatial"]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-
 [node name="Description" type="TextEdit" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
