@@ -39,10 +39,10 @@ unit_db = 10.0
 autoplay = true
 
 [node name="PickableMitochondum" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.832502, 1.17722, -0.108978 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.662349, 1.17722, -0.37848 )
 
 [node name="PickableDNA" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.963128, 1.25782, -0.128584 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.642547, 1.25782, 0.0162002 )
 
 [node name="GUIPanel3D" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31616, -0.59319 )
