@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/gui_in_vr/fontPic/BMEULJIROTTF_20yelb.tres" type="DynamicFont" id=1]
+[ext_resource path="res://addons/gui_in_vr/mainButtons/MenuButton.gd" type="Script" id=2]
+
+[node name="MenuButton" type="Button"]
+margin_right = 370.0
+margin_bottom = 20.0
+flat = true
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 50, 25 )
+custom_colors/font_color = Color( 0.94902, 0.866667, 0.658824, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Label"
+valign = 1
+uppercase = true
