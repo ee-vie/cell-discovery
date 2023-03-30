@@ -24,11 +24,10 @@ export var far_z = 1000.0
 var interface : ARVRInterface
 var enabled_extensions : Array
 
-#onready var label3d = $Label3D
+onready var label3d = $Label3D
+onready var menutext = $ChangetoMenu
 
-
-
-
+var menu_check = false
 
 func set_auto_initialise(p_new_value):
 	auto_initialise = p_new_value
@@ -59,20 +58,37 @@ func _ready():
 	$ARVRCamera.near = near_z
 	$ARVRCamera.far = far_z
 	
-	#label3d.hide()
+	menutext.hide()
+	label3d.hide()
 	
 
 	if auto_initialise && !Engine.editor_hint:
 		initialise()
 
-#func panelshow(text):
-	#label3d.set_text(text)
-	#label3d.show()
+func panelshow(text):
+	label3d.set_text(text)
+	label3d.show()
 	
 	
-#func panelhide():
-	#abel3d.hide()
-	
+func panelhide():
+	label3d.hide()
+
+func _on_LeftHandController_button_release(button):
+	if button == 7:
+		menu_check = true
+		menutext.show()
+		print(menu_check)
+		
+	if menu_check:
+		if button == 1:
+			menutext.hide()
+			panelhide()
+			menu_check = false
+
+		if button == 2:
+			get_tree().change_scene("res://Scences/MainMenu2.tscn")
+			menu_check = false
+			print(menu_check)
 
 func initialise() -> bool:
 	if Engine.editor_hint:
@@ -226,3 +242,10 @@ func _get_configuration_warning():
 		return "You must call initialise() manually for VR to start"
 
 	return ""
+
+
+
+
+
+
+
