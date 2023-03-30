@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Music/Sound effects/under-water.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/cell_components/Cytoskeleton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Music/Sound effects/9.heartctg_short-34053.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Music/Sound effects/5.superspacy-atmosphere-106826.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Assets/cell_components/VesikelLarge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/cell_components/Mitochondria.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/cell_components/Nucleus.tscn" type="PackedScene" id=9]
@@ -101,8 +103,11 @@ ribosome synthesis."
 [node name="CellMembrane" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.912856, 0, 0.408283, 0, 1, 0, -0.408283, 0, -0.912856, -3.81687, 0, 15.3188 )
 
+[node name="MeshInstance2" parent="CellMembrane/StaticBody" index="0"]
+visible = false
+
 [node name="CollisionShape" parent="CellMembrane/StaticBody" index="2"]
-transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495763 )
+transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495758 )
 
 [node name="Description" parent="CellMembrane" index="3"]
 visible = false
@@ -111,50 +116,111 @@ visible = false
 
 [node name="SmoothER" parent="." instance=ExtResource( 12 )]
 
-[node name="GolgiApparatus" parent="." instance=ExtResource( 7 )]
+[node name="Golgi" type="Spatial" parent="."]
+
+[node name="GolgiApparatus" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 1.3371, -0.870132, 1.20625, 1.23899, 1.54899, -0.256031, -0.822838, 0.918438, 1.57461, -29.0948, -20.4633, 28.2307 )
 
-[node name="GolgiApparatus2" parent="." instance=ExtResource( 7 )]
+[node name="GolgiApparatus2" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 0.432846, -0.834654, -1.76522, 0.485591, -1.70525, 0.925372, -1.89126, -0.628859, -0.166405, -12.4108, -5.0666, 45.4496 )
 
-[node name="GolgiApparatus3" parent="." instance=ExtResource( 7 )]
+[node name="GolgiApparatus3" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( -0.645167, -0.00523217, 1.89307, -0.640955, 1.88247, -0.213237, -1.78127, -0.675474, -0.608931, 9.13623, 4.6321, 45.8188 )
 
-[node name="GolgiApparatus4" parent="." instance=ExtResource( 7 )]
+[node name="GolgiApparatus4" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 0.925168, 0.30243, 1.74717, -0.851264, 1.80449, 0.138412, -1.55545, -0.807679, 0.963453, -26.1551, 14.0889, 36.0505 )
 
-[node name="Mitochondria" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.707107, -0.5, -0.5, 0, 0.707107, -0.707107, 0.707107, 0.5, 0.5, 20.5154, 14.7573, -7.79729 )
-
-[node name="Mitochondria2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.75, -0.5, -0.433013, 0.433013, 0.866025, -0.25, 0.5, 0, 0.866025, -14, -30, 35 )
-
-[node name="Mitochondria3" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.866025, 0, 0.5, 0.353553, 0.707107, -0.612372, -0.353553, 0.707107, 0.612372, -43, 13, 10 )
-
-[node name="Mitochondria4" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.707107, 0, 0.707107, 0.5, 0.707107, -0.5, -0.5, 0.707107, 0.5, 17, -29, 17 )
-
-[node name="Mitochondria5" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.707107, -0.5, -0.5, 0, 0.707107, -0.707107, 0.707107, 0.5, 0.5, -36, 23, 28 )
-
-[node name="Mitochondria6" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -42, -18, 3 )
-
-[node name="Mitochondria7" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -31, 2 )
-
-[node name="Mitochondria8" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.0334937, 0.875, -0.482963, 0.12941, 0.482963, 0.866025, 0.991025, -0.0334937, -0.12941, 28, 11, 42 )
-
-[node name="Mitochondria9" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.965926, 0.224144, 0.12941, -0.258819, 0.836516, 0.482963, 0, -0.5, 0.866025, -50, 4, 32 )
-
-[node name="Mitochondria10" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 27, 5 )
-
-[node name="Mitochondria11" parent="." instance=ExtResource( 8 )]
+[node name="Mitochondrien" type="Spatial" parent="."]
 transform = Transform( -0.965926, -0.183013, 0.183013, 0, 0.707107, 0.707107, -0.258819, 0.683013, -0.683013, -1, 26, 4 )
+
+[node name="Mitochondria" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.866026, 0.353553, 0.353553, 0.353553, 0.933012, -0.0669875, -0.353553, 0.0669875, -0.933012, -17.7289, -19.9451, 4.0455 )
+
+[node name="Mitochondria14" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.511037, 0.667162, 0.541974, -0.412236, -0.743511, 0.526547, 0.754256, 0.0456636, 0.65499, 25.9135, -24.1943, 8.29469 )
+
+[node name="Mitochondria15" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.79265, 0.29408, 0.534062, -0.36195, -0.931886, -0.0240625, 0.490609, -0.212377, 0.845102, 10.8658, -50.339, -10.3911 )
+
+[node name="Mitochondria16" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( 0.787462, 0.41532, 0.455425, -0.366731, -0.27816, 0.887769, 0.49539, -0.866103, -0.0667289, 33.3672, -35.6806, -25.0495 )
+
+[node name="Mitochondria13" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -1, -1.3411e-07, -1.19209e-07, 1.78814e-07, 0.999999, -2.08616e-07, -1.78814e-07, 2.08616e-07, -0.999999, -17.7289, -47.2394, -23.2488 )
+
+[node name="Mitochondria2" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.853854, 0.482963, 0.194114, 0.510433, 0.703878, 0.493976, 0.10194, 0.520866, -0.847529, 4.53363, -16.0454, -63.1505 )
+
+[node name="Mitochondria3" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.745009, -0.183013, -0.641456, -0.149975, 0.982963, -0.106261, 0.649974, 0.0170372, -0.759764, 39.016, 2.59222, -20.977 )
+
+[node name="Mitochondria4" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.553603, -0.183013, -0.812422, -0.117362, 0.982963, -0.141457, 0.824469, 0.0170372, -0.56565, -20.7513, -33.3059, -44.4758 )
+
+[node name="Mitochondria5" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.866026, 0.353553, 0.353553, 0.353553, 0.933012, -0.0669875, -0.353553, 0.0669875, -0.933012, 27.5957, 20.6764, -24.9191 )
+
+[node name="Mitochondria6" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.965926, -0.12941, -0.224144, -0.183013, 0.953878, 0.237952, 0.183013, 0.270866, -0.945059, 39.8618, -24.2922, -37.9332 )
+
+[node name="Mitochondria7" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.965926, 0, -0.258819, -0.183013, 0.707107, 0.683012, 0.183013, 0.707107, -0.683012, 9.21097, -40.024, -40.5862 )
+
+[node name="Mitochondria8" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.224144, -0.836516, 0.5, 0.774519, 0.158494, 0.612372, -0.591505, 0.524519, 0.612372, -37.847, 10.0405, -31.2537 )
+
+[node name="Mitochondria9" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.933013, -0.0870968, -0.349144, -0.359789, 0.208979, 0.909328, -0.00623605, 0.974033, -0.226316, 40.0834, 12.5356, -43.6483 )
+
+[node name="Mitochondria10" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( -0.965926, 0, -0.258819, -0.183013, 0.707107, 0.683012, 0.183013, 0.707107, -0.683012, 30.6508, 7.24652, -5.83231 )
+
+[node name="Mitochondria11" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -3.13607, 26.5357, -33.1825 )
+
+[node name="Mitochondria17" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( 0.766044, 0.45452, -0.45452, -0.454519, 0.883022, 0.116978, 0.454519, 0.116978, 0.883022, -14.1654, 4.05096, -4.05096 )
+
+[node name="Mitochondria18" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( 0.258819, 0.96225, -0.0841859, -0.683012, 0.243944, 0.688465, 0.683012, -0.120688, 0.720366, -28.4819, -14.7537, -19.1874 )
+
+[node name="Mitochondria12" parent="Mitochondrien" instance=ExtResource( 8 )]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -16.0526, -18.5491, -56.8284 )
+
+[node name="Zytoskelett" type="Spatial" parent="."]
+
+[node name="Cytoskeleton" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, 29.4544, 0 )
+
+[node name="Cytoskeleton11" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 2.31021, 0.5, 0, -1.3338, 0.866025, 0, -33.8456, 23.1 )
+
+[node name="Cytoskeleton2" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 0.866025, -0.8, 0, 0.5, 1.38564, 0, 0, 0, 1, 14, -29.2481, 0 )
+
+[node name="Cytoskeleton9" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 0.719846, -1.20805, -0.34202, 0.642788, 1.53209, 0, 0.262003, -0.439693, 0.939693, 25.7, -22.3481, 8.3 )
+
+[node name="Cytoskeleton3" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 0.5, -1.38564, 0, 0.866025, 0.8, 0, 0, 0, 1, 30, -12, 0 )
+
+[node name="Cytoskeleton4" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( -0.126826, -1.24853, 0.612372, 0.926777, 0.202922, 0.353553, -0.353553, 0.979796, 0.707107, 25.7963, -6, -19 )
+
+[node name="Cytoskeleton5" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( -0.372424, -0.345635, 0.902571, 0.882772, -0.612096, 0.272693, 0.28638, 1.43732, 0.333173, 3.7963, 18, -26.1 )
+
+[node name="Cytoskeleton6" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( -0.267973, -1.41885, -0.376572, 0.882772, -0.612096, 0.272693, -0.38588, -0.414965, 0.885343, 28.131, 14, 7.9 )
+
+[node name="Cytoskeleton7" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( -0.494622, -0.707723, 0.748128, 0.603058, -1.27124, -0.0710508, 0.625836, 0.665634, 0.65974, 15.7963, 24.9243, -14 )
+
+[node name="Cytoskeleton10" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 0.0539323, 0.0467918, 0.998116, -0.558155, -1.32472, 0.0544183, 0.827982, -0.896062, -0.0283301, -0.403699, 24.9543, 20.5 )
+
+[node name="Cytoskeleton8" parent="Zytoskelett" instance=ExtResource( 3 )]
+transform = Transform( 0.224144, -0.207055, 0.965926, 0.5, 1.38564, 0, -0.836516, 0.772741, 0.258819, 8, -26.2998, -17 )
 
 [node name="vesicle" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6, 33 )
@@ -187,6 +253,42 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -41.2114, 8.2004 )
 [node name="CollisionShape" type="CollisionShape" parent="FallStop"]
 shape = SubResource( 8 )
 
+[node name="LargeVesicles" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
+
+[node name="VesicleLarge" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.4, -6.8, -24 )
+
+[node name="VesicleLarge2" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9, 0, 0 )
+
+[node name="VesicleLarge3" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.9, -34.7 )
+
+[node name="VesicleLarge4" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3, -14, 29.5 )
+
+[node name="VesicleLarge5" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.2, 0, 19.7 )
+
+[node name="VesicleLarge6" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.2, -12.9, -17 )
+
+[node name="VesicleLarge7" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -32.5, -17 )
+
+[node name="VesicleLarge8" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, -28.7, 14.7 )
+
+[node name="VesicleLarge9" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.2, -12.9, -17 )
+
+[node name="VesicleLarge10" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3, 14.3, -29.6 )
+
+[node name="VesicleLarge11" parent="LargeVesicles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3, -6.3, -34.2 )
+
 [editable path="FPControllerCellScence"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
 [editable path="Nucleus"]
@@ -196,8 +298,8 @@ shape = SubResource( 8 )
 [editable path="CellMembrane/StaticBody/cell_membrane"]
 [editable path="RoughER"]
 [editable path="RoughER/StaticBody/ER_rough"]
-[editable path="GolgiApparatus"]
-[editable path="GolgiApparatus/StaticBody/golgi"]
+[editable path="Golgi/GolgiApparatus"]
+[editable path="Golgi/GolgiApparatus/StaticBody/golgi"]
 [editable path="vesicle"]
 [editable path="vesicle2"]
 [editable path="vesicle3"]
