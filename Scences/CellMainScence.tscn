@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
-[ext_resource path="res://addons/godot-xr-tools/staging/scene_base.gd" type="Script" id=2]
+[ext_resource path="res://Music/Sound effects/under-water.mp3" type="AudioStream" id=2]
+[ext_resource path="res://addons/godot-xr-tools/staging/scene_base.gd" type="Script" id=3]
 [ext_resource path="res://Music/Sound effects/9.heartctg_short-34053.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Music/Sound effects/5.superspacy-atmosphere-106826.mp3" type="AudioStream" id=5]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=7]
@@ -14,16 +15,6 @@
 [ext_resource path="res://Assets/cell_components/vesicle.glb" type="PackedScene" id=14]
 [ext_resource path="res://Scences/VesicleAnimationPlayer.gd" type="Script" id=15]
 [ext_resource path="res://Assets/cell_components/Nucleolus.tscn" type="PackedScene" id=16]
-
-[sub_resource type="ViewportTexture" id=3]
-viewport_path = NodePath("Viewport")
-
-[sub_resource type="SpatialMaterial" id=4]
-resource_local_to_scene = true
-flags_transparent = true
-flags_unshaded = true
-flags_albedo_tex_force_srgb = true
-albedo_texture = SubResource( 3 )
 
 [sub_resource type="CylinderMesh" id=6]
 
@@ -64,18 +55,12 @@ script = ExtResource( 2 )
 [node name="FPControllerCellScence" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
 
-[node name="GUIPanel3D" parent="FPControllerCellScence" index="0"]
-visible = true
-
-[node name="OptionButton" parent="FPControllerCellScence/GUIPanel3D/Viewport/GUI/Panel" index="7"]
-items = [ "Item 0", null, false, 0, null, "Item 1", null, false, 1, null, "Item 2", null, false, 2, null ]
-
-[node name="Quad" parent="FPControllerCellScence/GUIPanel3D" index="2"]
-material/0 = SubResource( 4 )
-
-[node name="MovementFlight" parent="FPControllerCellScence" index="6"]
+[node name="MovementFlight" parent="FPControllerCellScence" index="5"]
 order = 2
 flight_button = 2
+
+[node name="ChangetoMenu" parent="FPControllerCellScence" index="8"]
+visible = false
 
 [node name="SpawnPlatform" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211399, 8.2004 )
@@ -88,22 +73,27 @@ mesh = SubResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09, 0 )
 shape = SubResource( 7 )
 
-[node name="cellsound-Heart" type="AudioStreamPlayer3D" parent="."]
+[node name="cellsound-Heart" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-unit_db = -10.0
+volume_db = -15.0
 autoplay = true
 
-[node name="space" type="AudioStreamPlayer3D" parent="cellsound-Heart"]
+[node name="space" type="AudioStreamPlayer" parent="cellsound-Heart"]
 stream = ExtResource( 5 )
 autoplay = true
 
-[node name="underwater" type="AudioStreamPlayer3D" parent="cellsound-Heart"]
+[node name="underwater" type="AudioStreamPlayer" parent="cellsound-Heart"]
+stream = ExtResource( 2 )
 autoplay = true
 
 [node name="Nucleus" parent="." instance=ExtResource( 9 )]
 
 [node name="Nucleolus" parent="." instance=ExtResource( 16 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+
+[node name="Description" parent="Nucleolus" index="2"]
+text = "Das ist ein Nucleolus
+"
 
 [node name="CellMembrane" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.912856, 0, 0.408283, 0, 1, 0, -0.408283, 0, -0.912856, -3.81687, 0, 15.3188 )
@@ -195,14 +185,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -41.2114, 8.2004 )
 shape = SubResource( 8 )
 
 [editable path="FPControllerCellScence"]
-[editable path="FPControllerCellScence/GUIPanel3D"]
-[editable path="FPControllerCellScence/GUIPanel3D/Viewport/GUI"]
 [editable path="FPControllerCellScence/LeftHandController/FunctionTeleport"]
-[editable path="FPControllerCellScence/Controller"]
 [editable path="Nucleus"]
 [editable path="Nucleus/StaticBody/nucleus_1"]
+[editable path="Nucleolus"]
 [editable path="CellMembrane"]
 [editable path="CellMembrane/StaticBody/cell_membrane"]
+[editable path="RoughER"]
+[editable path="RoughER/StaticBody/ER_rough"]
+[editable path="GolgiApparatus"]
+[editable path="GolgiApparatus/StaticBody/golgi"]
 [editable path="vesicle"]
 [editable path="vesicle2"]
 [editable path="vesicle3"]

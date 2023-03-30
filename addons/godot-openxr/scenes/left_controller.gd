@@ -5,17 +5,15 @@ signal deactivated
 
 export var hide_for_no_tracking_confidence = false
 
-#onready var fpcontroller = self.get_owner()
-#
-#onready var menutext = fpcontroller.get_node("ChangetoMenu")
-#
-#onready var leftcontroller = self.get_controller_id()
-#
-#var presscheck = false
+onready var fpcontroller = self.get_owner()
 
-#func _ready():
-#	menutext.hide()
-#
+onready var menutext = fpcontroller.get_node("ChangetoMenu")
+
+var presscheck = false
+
+
+func _ready():
+	menutext.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var should_be_visible = true
@@ -39,21 +37,13 @@ func _process(delta):
 			print("Deactivated " + name)
 			emit_signal("deactivated")
 	
-#	if controller_id == 1:
-#		if self.is_button_pressed(7):
-#			menutext.show()
-#			presscheck = true
-#
-#		if presscheck:
-#			if self.is_button_pressed(1):
-#				menutext.hide()
-#				presscheck = false
-#
-#			if self.is_button_pressed(7):
-#				pass
-#
-#				presscheck = false
-#				#hier load to menu scence
-#
-func test():
-	pass
+
+		if self.is_button_pressed(7):
+			menutext.show()
+			presscheck = true
+			
+		if self.is_button_pressed(1) && presscheck:
+			menutext.hide()
+		if self.is_button_pressed(7) && presscheck:
+			pass
+			#hier load to menu scence

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr_minigame.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr_ingame.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openxr/scenes/controller.gd" type="Script" id=2]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" type="PackedScene" id=4]
@@ -49,3 +49,17 @@ turn_mode = 1
 [node name="FunctionPickup" parent="RightHandController" instance=ExtResource( 8 )]
 
 [node name="PlayerBody" parent="." instance=ExtResource( 6 )]
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( 0.941929, 0, 0.335813, 0, 1, 0, -0.335813, 0, 0.941929, -0.328355, 1.31715, -0.716433 )
+visible = false
+cast_shadow = 0
+width = 300.0
+
+[node name="ChangetoMenu" type="Label3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25558, -0.7428 )
+text = "Leave to Menu?
+
+Grap: Yes        Y:No"
+
+[connection signal="button_release" from="LeftHandController" to="." method="_on_LeftHandController_button_release"]

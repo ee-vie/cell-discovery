@@ -31,6 +31,11 @@ func _process(_delta):
 			pass
 		else:
 			target.hide_object(true)
+
+
+
+
+
 #	if $RayCast.is_colliding():
 #		var point = $RayCast.get_collision_point()
 #
