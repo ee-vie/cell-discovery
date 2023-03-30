@@ -375,7 +375,7 @@ _global_script_class_icons={
 [application]
 
 config/name="VRMedProject"
-run/main_scene="res://Scences/CellMainScence.tscn"
+run/main_scene="res://Scences/MainStaging.tscn"
 config/icon="res://icon.png"
 
 [autoload]
