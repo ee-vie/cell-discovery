@@ -60,6 +60,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.05601 )
 order = 2
 flight_button = 2
 
+[node name="Label3D" parent="FPControllerCellScence" index="7"]
+transform = Transform( 0.941929, 0, 0.335813, 0, 1, 0, -0.335813, 0, 0.941929, 0, 1.8, -0.3 )
+
 [node name="SpawnPlatform" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.211399, 8.2004 )
 
@@ -90,20 +93,24 @@ autoplay = true
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 
 [node name="Description" parent="Nucleolus" index="2"]
-text = "Das ist ein Nucleolus
-"
+text = "Nucleolus: 
+an area inside the nucleus
+that is made up of DNA, 
+RNA and proteins; 
+it is responsible for 
+ribosome synthesis."
 
 [node name="CellMembrane" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.912856, 0, 0.408283, 0, 1, 0, -0.408283, 0, -0.912856, -3.81687, 0, 15.3188 )
-
-[node name="Description" parent="CellMembrane" index="2"]
-visible = false
 
 [node name="MeshInstance2" parent="CellMembrane/StaticBody" index="0"]
 visible = false
 
 [node name="CollisionShape" parent="CellMembrane/StaticBody" index="2"]
 transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495758 )
+
+[node name="Description" parent="CellMembrane" index="3"]
+visible = false
 
 [node name="RoughER" parent="." instance=ExtResource( 11 )]
 

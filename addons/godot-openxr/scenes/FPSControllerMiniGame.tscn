@@ -58,6 +58,7 @@ width = 300.0
 
 [node name="ChangetoMenu" type="Label3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25558, -0.7428 )
+visible = false
 text = "Leave to Menu?
 
 Grap: Yes        Y:No"

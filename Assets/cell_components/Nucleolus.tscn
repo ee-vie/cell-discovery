@@ -56,7 +56,11 @@ material/0 = ExtResource( 2 )
 [node name="Description" type="TextEdit" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-text = "Das ist ein Nucleolus"
+text = "Nucleolus: an area inside 
+the nucleus that is made up 
+of DNA, RNA and proteins; 
+it is responsible for 
+ribosome synthesis."
 
 [node name="Particles" type="Particles" parent="."]
 amount = 100

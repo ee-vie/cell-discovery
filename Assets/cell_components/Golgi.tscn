@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Materials/HighlightingMaterial.tres" type="Material" id=1]
 [ext_resource path="res://Assets/Highlighthide.gd" type="Script" id=2]
-[ext_resource path="res://addons/gui_in_vr/gui_panel_3d.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/cell_components/Material.material" type="Material" id=4]
 [ext_resource path="res://Assets/cell_components/golgi.glb" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Materials/Golgi.tres" type="Material" id=6]
@@ -29,8 +28,6 @@ surfaces/0 = {
 [node name="GolgiApparatus" type="Spatial"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
-[node name="Description" parent="." instance=ExtResource( 3 )]
-
 [node name="StaticBody" type="StaticBody" parent="." groups=["ChoosableObejct"]]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 script = ExtResource( 2 )
@@ -54,5 +51,13 @@ stream = ExtResource( 7 )
 unit_db = 50.0
 autoplay = true
 max_distance = 30.0
+
+[node name="Description" type="TextEdit" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+text = "Golgi Complex: 
+responsible for modifying
+proteins, which are then sent
+to their destination in vesicles."
 
 [editable path="StaticBody/golgi"]

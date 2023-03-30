@@ -32,27 +32,27 @@ func _ready():
 	firstbase.show_base(firstbase.get_basenumber())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if (dna_base_value == rna_base_value) && dna_base_value != null:
-		var dna_base_instance = dna_base.instance()
-		add_child(dna_base_instance)
-		dna_base_instance.set_global_translation(dna_spawnpos)
-		dna_base_instance.show_base(dna_base_instance.get_basenumber())
-		
-		
-		var rna_base_instance = rna_base.instance()
-		add_child(rna_base_instance)
-		rna_base_instance.set_basenumber(rna_base_value)
-		rna_base_instance.set_global_translation(rna_spawnpos)
-		rna_base_instance.show_base(rna_base_instance.get_basenumber())
-		
-		for childnumber in get_child_count():
-			var child = get_child(childnumber)
-			if child.has_method("move"):
-				child.move()
-		
-		dna_base_value = null
-		rna_base_value = null
+#func _process(delta):
+#	if (dna_base_value == rna_base_value) && dna_base_value != null:
+#		var dna_base_instance = dna_base.instance()
+#		add_child(dna_base_instance)
+#		dna_base_instance.set_global_translation(dna_spawnpos)
+#		dna_base_instance.show_base(dna_base_instance.get_basenumber())
+#
+#
+#		var rna_base_instance = rna_base.instance()
+#		add_child(rna_base_instance)
+#		rna_base_instance.set_basenumber(rna_base_value)
+#		rna_base_instance.set_global_translation(rna_spawnpos)
+#		rna_base_instance.show_base(rna_base_instance.get_basenumber())
+#
+#		for childnumber in get_child_count():
+#			var child = get_child(childnumber)
+#			if child.has_method("move"):
+#				child.move()
+#
+#		dna_base_value = null
+#		rna_base_value = null
 
 func _on_CheckArea_area_entered(area):
 	if area.has_method("Base"):
@@ -79,6 +79,27 @@ func _on_CheckArea_area_exited(area):
 			base_highlight.hide_cytosine()
 		if area.has_method("Guanine"):
 			base_highlight.hide_guanine()
+			
+	if (dna_base_value == rna_base_value) && dna_base_value != null:
+		var dna_base_instance = dna_base.instance()
+		add_child(dna_base_instance)
+		dna_base_instance.set_global_translation(dna_spawnpos)
+		dna_base_instance.show_base(dna_base_instance.get_basenumber())
+		
+		
+		var rna_base_instance = rna_base.instance()
+		add_child(rna_base_instance)
+		rna_base_instance.set_basenumber(rna_base_value)
+		rna_base_instance.set_global_translation(rna_spawnpos)
+		rna_base_instance.show_base(rna_base_instance.get_basenumber())
+		
+		for childnumber in get_child_count():
+			var child = get_child(childnumber)
+			if child.has_method("move"):
+				child.move()
+		
+		dna_base_value = null
+		rna_base_value = null
 
 func _on_Timer_timeout():
 	firstbase.move()
