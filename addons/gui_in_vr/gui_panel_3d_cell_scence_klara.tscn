@@ -19,7 +19,6 @@ flags_albedo_tex_force_srgb = true
 albedo_texture = SubResource( 3 )
 
 [node name="GUIPanel3D" type="StaticBody"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 380, 280 )
@@ -35,6 +34,6 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.01 )
 shape = SubResource( 1 )
 
 [node name="Quad" type="MeshInstance" parent="."]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 4 )

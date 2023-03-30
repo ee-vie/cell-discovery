@@ -14,7 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if lcontroller.is_button_pressed(1): #Y button
-		get_tree().change_scene("res://Scences/CellMainScence.tscn")
-	if lcontroller.is_button_pressed(7): #X Button
-		get_tree().change_scene("res://Scences/TranskriptionGame.tscn")
+	#if lcontroller.is_button_pressed(1): #Y button
+		#get_tree().change_scene("res://Scences/CellMainScence.tscn")
+	#if lcontroller.is_button_pressed(7): #X Button
+		#get_tree().change_scene("res://Scences/TranskriptionGame.tscn")
+	pass

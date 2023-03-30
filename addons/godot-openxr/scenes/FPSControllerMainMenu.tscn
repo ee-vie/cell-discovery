@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openxr/scenes/controller.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/godot-openxr/config/OpenXRConfig.gdns" type="Script" id=8]
 [ext_resource path="res://addons/gui_in_vr/player/controller.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_pickup.gd" type="Script" id=10]
 
 [node name="FPControllerCellScence" type="ARVROrigin"]
 script = ExtResource( 1 )
@@ -38,11 +39,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00217295, -0.00425887, 0.003
 [node name="MovementTurn" parent="RightHandController" instance=ExtResource( 4 )]
 turn_mode = 1
 
+[node name="XRToolsFunctionPickup" type="Spatial" parent="RightHandController"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 0.5 )
+script = ExtResource( 10 )
+
 [node name="LeftHandController" type="ARVRController" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5 )
 script = ExtResource( 2 )
 
 [node name="LeftHand" parent="LeftHandController" instance=ExtResource( 7 )]
+
+[node name="XRToolsFunctionPickup" type="Spatial" parent="LeftHandController"]
+script = ExtResource( 10 )
 
 [node name="PlayerBody" parent="." instance=ExtResource( 3 )]
 

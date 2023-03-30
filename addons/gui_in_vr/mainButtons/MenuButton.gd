@@ -1,3 +1,3 @@
 extends Button
 
-export (String, FILE, '*.tscn') var scene_to_load : String = ("res://Scences/MainMenu2.tscn")
+export(String) var scene_to_load
