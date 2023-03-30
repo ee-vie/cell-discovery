@@ -25,8 +25,9 @@ var interface : ARVRInterface
 var enabled_extensions : Array
 
 onready var label3d = $Label3D
-
 onready var menutext = $ChangetoMenu
+
+var menu_check = false
 
 func set_auto_initialise(p_new_value):
 	auto_initialise = p_new_value
@@ -74,16 +75,20 @@ func panelhide():
 
 func _on_LeftHandController_button_release(button):
 	if button == 7:
+		menu_check = true
 		menutext.show()
+		print(menu_check)
+		
+	if menu_check:
+		if button == 1:
+			menutext.hide()
+			panelhide()
+			menu_check = false
 
-	if button == 1:
-		menutext.hide()
-		panelhide()
-
-	if button == 2:
-		menutext.hide()
-#
-#		#load menu hier
+		if button == 2:
+			get_tree().change_scene("res://Scences/MainMenu2.tscn")
+			menu_check = false
+			print(menu_check)
 
 func initialise() -> bool:
 	if Engine.editor_hint:

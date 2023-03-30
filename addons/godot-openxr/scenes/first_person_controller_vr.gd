@@ -24,7 +24,7 @@ export var far_z = 1000.0
 var interface : ARVRInterface
 var enabled_extensions : Array
 
-onready var label3d = $Label3D
+#onready var label3d = $Label3D
 
 
 
@@ -59,19 +59,19 @@ func _ready():
 	$ARVRCamera.near = near_z
 	$ARVRCamera.far = far_z
 	
-	label3d.hide()
+	#label3d.hide()
 	
 
 	if auto_initialise && !Engine.editor_hint:
 		initialise()
 
-func panelshow(text):
-	label3d.set_text(text)
-	label3d.show()
+#func panelshow(text):
+	#label3d.set_text(text)
+	#label3d.show()
 	
 	
-func panelhide():
-	label3d.hide()
+#func panelhide():
+	#abel3d.hide()
 	
 
 func initialise() -> bool:
