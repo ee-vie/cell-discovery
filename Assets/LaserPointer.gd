@@ -31,9 +31,7 @@ func _process(_delta):
 			pass
 		else:
 			target.hide_object(true)
-			
-	if rcontroller.is_button_pressed(1):
-		rowner.panelhide()
+
 
 
 
