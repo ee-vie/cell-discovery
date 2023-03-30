@@ -47,5 +47,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.642547, 1.25782, 0.0162002 
 [node name="GUIPanel3D" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31616, -0.59319 )
 
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 1.50239, 1.38628, -2.62001 )
+text = "Choosing a scene:
+- select a scene in the menu 
+or 
+- pick up DNA (transcription) or mitochondrium (cell)
+with your left hand and use the trigger button.
+
+Controls in the cell:
+- Toggle flying with the left grip, move with the left joystick 
+	and steer with your head.
+- Turn with the right joystick.
+- Teleport to close-by surfaces with the left trigger.
+- View discriptions of cell organelles selecting them 
+	with the laser pointer and the right trigger.
+- Return to the menu by klicking the X button.
+
+"
+horizontal_alignment = 0
+
+[node name="wall" type="MeshInstance" parent="Label3D"]
+transform = Transform( 9.86975e-16, 4.37114e-08, 0.514714, 0.516556, -4.37114e-08, 0, 2.25794e-08, 1, -2.24989e-08, 1.79267, -1.73365, -0.304159 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
 [editable path="ARVROrigin"]
 [editable path="ARVROrigin/Controller"]
