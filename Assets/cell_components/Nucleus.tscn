@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Highlighthide.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Materials/HighlightingMaterial.tres" type="Material" id=2]
 [ext_resource path="res://Assets/cell_components/nucleus_1.glb" type="PackedScene" id=3]
+[ext_resource path="res://Music/deep-sea-ambience-6933.mp3" type="AudioStream" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -66,5 +67,10 @@ material/0 = ExtResource( 2 )
 
 [node name="nucleus" parent="StaticBody/nucleus_1" index="0"]
 material/0 = SubResource( 6 )
+
+[node name="Deap sea ambience" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_db = 1.0
+max_distance = 10.0
 
 [editable path="StaticBody/nucleus_1"]
