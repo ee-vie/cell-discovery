@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bubbles.mp3-bbf2971ae624085549029acb1c7fd690.mp3str"
+
+[deps]
+
+source_file="res://Music/bubbles.mp3"
+dest_files=[ "res://.import/bubbles.mp3-bbf2971ae624085549029acb1c7fd690.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

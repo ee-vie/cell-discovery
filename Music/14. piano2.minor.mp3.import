@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/14. piano2.minor.mp3-0a2a28511a98653c0b0b7ac7750d28fc.mp3str"
+
+[deps]
+
+source_file="res://Music/14. piano2.minor.mp3"
+dest_files=[ "res://.import/14. piano2.minor.mp3-0a2a28511a98653c0b0b7ac7750d28fc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/godot-openxr/scenes/FPSControllerCellScence.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Music/Sound effects/under-water.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Music/6.underwater-whale-and-diving-sound-ambient-116185.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Assets/cell_components/Cytoskeleton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Music/Sound effects/9.heartctg_short-34053.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Music/Sound effects/5.superspacy-atmosphere-106826.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Music/9.heartctg_short-34053.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Music/5.superspacy-atmosphere-106826.mp3" type="AudioStream" id=5]
 [ext_resource path="res://Assets/cell_components/VesikelLarge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/cell_components/Golgi.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/cell_components/Mitochondria.tscn" type="PackedScene" id=8]
@@ -119,13 +119,8 @@ visible = false
 [node name="CollisionShape" parent="CellMembrane/StaticBody" index="2"]
 transform = Transform( 1.00419, 0, 0, 0, 1.00419, 0, 0, 0, 1.00419, 0.0221431, 0, 0.0495758 )
 
-[node name="Description" parent="CellMembrane" index="3"]
+[node name="Description" parent="CellMembrane" index="2"]
 visible = false
-text = "Cell membrane:
- a lipid bilayer that separates 
-and protects the interior of 
-the cell from the outside
- environment."
 
 [node name="RoughER" parent="." instance=ExtResource( 11 )]
 
@@ -135,12 +130,6 @@ the cell from the outside
 
 [node name="GolgiApparatus" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 1.3371, -0.870132, 1.20625, 1.23899, 1.54899, -0.256031, -0.822838, 0.918438, 1.57461, -29.0948, -20.4633, 28.2307 )
-
-[node name="Description" parent="Golgi/GolgiApparatus" index="2"]
-text = "Golgi Complex: 
-responsible for modifying
-proteins, which are then sent
-to their destination in vesicles."
 
 [node name="GolgiApparatus2" parent="Golgi" instance=ExtResource( 7 )]
 transform = Transform( 0.432846, -0.834654, -1.76522, 0.485591, -1.70525, 0.925372, -1.89126, -0.628859, -0.166405, -12.4108, -5.0666, 45.4496 )

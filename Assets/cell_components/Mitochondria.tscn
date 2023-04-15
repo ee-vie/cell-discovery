@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/cell_components/mitochiondria.glb" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Materials/MitIMM.tres" type="Material" id=5]
 [ext_resource path="res://Assets/Materials/MitOMM.tres" type="Material" id=6]
-[ext_resource path="res://Music/Sound effects/4.rustling-leaves-6875.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Music/4.rustling-leaves-6875.mp3" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape" id=6]
 radius = 0.492335
@@ -27,7 +27,7 @@ surfaces/0 = {
 
 [node name="Mitochondria" type="Spatial"]
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="rusting leaves sound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 7 )
 unit_db = 30.0
 autoplay = true

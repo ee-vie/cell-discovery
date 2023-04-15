@@ -16,7 +16,8 @@
 [ext_resource path="res://Assets/MinigameComponents/RNABasesHighlight.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/MinigameComponents/PickableUracile.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/MinigameComponents/RnaPolymerase.glb" type="PackedScene" id=16]
-[ext_resource path="res://Music/Game and menu music/11.jazz-loop.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Music/11.jazz-loop.mp3" type="AudioStream" id=17]
+
 
 [sub_resource type="CylinderMesh" id=1]
 height = 0.056
